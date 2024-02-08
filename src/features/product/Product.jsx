@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import ProductCard from "./ProductCard";
 
-const Product = () => {
+const Product = ({ products }) => {
   return (
-    <div>Product</div>
-  )
-}
+    <div>
+      {products.map((item) => (
+        <ProductCard key={item.id} product={item} />
+      ))}
+    </div>
+  );
+};
 
-export default Product
+export default Product;
